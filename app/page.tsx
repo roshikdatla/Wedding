@@ -4,12 +4,12 @@ import { useState, useEffect } from "react";
 import { Navigation } from "@/components/shared/Navigation";
 import { Footer } from "@/components/shared/Footer";
 import { HeroSection } from "@/components/sections/HeroSection";
-import { StorySection } from "@/components/sections/StorySection";
 import { EventsSection } from "@/components/sections/EventsSection";
 import { DressCodeSection } from "@/components/sections/DressCodeSection";
 import { GallerySection } from "@/components/sections/GallerySection";
 import { RSVPSection } from "@/components/sections/RSVPSection";
 import { PasswordGate } from "@/components/shared/PasswordGate";
+import { ChatBot } from "@/components/shared/ChatBot";
 
 export default function Home() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -45,7 +45,6 @@ export default function Home() {
 
         {/* Proposal Details Section */}
         <div id="proposal-details">
-          <StorySection />
           <EventsSection />
           <DressCodeSection />
           <GallerySection />
@@ -53,6 +52,7 @@ export default function Home() {
         </div>
       </main>
       <Footer />
+      <ChatBot />
     </div>
   );
 }
