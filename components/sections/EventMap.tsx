@@ -31,7 +31,35 @@ export function EventMap() {
           </div>
         </div>
 
-        {/* Arrows - hidden on mobile, shown on desktop */}
+        {/* Arrows pointing down on mobile */}
+        <svg className="md:hidden absolute inset-0 w-full h-full pointer-events-none z-[5]" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker
+              id="arrowhead-mobile"
+              markerWidth="10"
+              markerHeight="10"
+              refX="5"
+              refY="9"
+              orient="auto"
+            >
+              <polygon points="0 0, 10 0, 5 10" fill="#EF4444" />
+            </marker>
+          </defs>
+          {/* Arrow pointing down to info below */}
+          <line
+            x1="64%"
+            y1="72%"
+            x2="50%"
+            y2="95%"
+            stroke="#EF4444"
+            strokeWidth="3"
+            strokeDasharray="6,6"
+            markerEnd="url(#arrowhead-mobile)"
+            opacity="0.8"
+          />
+        </svg>
+
+        {/* Arrows to card on desktop */}
         <svg className="hidden md:block absolute inset-0 w-full h-full pointer-events-none z-[5]" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <marker
