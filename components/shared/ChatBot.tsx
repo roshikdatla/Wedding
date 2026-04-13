@@ -29,6 +29,16 @@ export function ChatBot() {
     scrollToBottom();
   }, [messages]);
 
+  // Force scroll during rapid updates
+  useEffect(() => {
+    const scrollInterval = setInterval(() => {
+      if (isLoading) {
+        messagesEndRef.current?.scrollIntoView({ behavior: "auto" });
+      }
+    }, 50);
+    return () => clearInterval(scrollInterval);
+  }, [isLoading]);
+
   const sendMessage = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!input.trim() || isLoading) return;
@@ -48,10 +58,29 @@ export function ChatBot() {
       const data = await response.json();
 
       if (response.ok) {
-        setMessages((prev) => [
-          ...prev,
-          { role: "assistant", content: data.reply },
-        ]);
+        // Add empty assistant message
+        setMessages((prev) => [...prev, { role: "assistant", content: "" }]);
+
+        // Typewriter effect - reveal message character by character
+        const fullMessage = data.reply;
+        let currentIndex = 0;
+
+        const typeInterval = setInterval(() => {
+          if (currentIndex < fullMessage.length) {
+            setMessages((prev) => {
+              const newMessages = [...prev];
+              newMessages[newMessages.length - 1] = {
+                role: "assistant",
+                content: fullMessage.substring(0, currentIndex + 1),
+              };
+              return newMessages;
+            });
+            currentIndex++;
+          } else {
+            clearInterval(typeInterval);
+            setIsLoading(false);
+          }
+        }, 20); // 20ms per character for smooth typing
       } else {
         setMessages((prev) => [
           ...prev,
@@ -60,6 +89,7 @@ export function ChatBot() {
             content: "Sorry, I encountered an error. Please try again.",
           },
         ]);
+        setIsLoading(false);
       }
     } catch (error) {
       setMessages((prev) => [
@@ -69,7 +99,6 @@ export function ChatBot() {
           content: "Sorry, I couldn't connect. Please try again later.",
         },
       ]);
-    } finally {
       setIsLoading(false);
     }
   };
@@ -97,7 +126,7 @@ export function ChatBot() {
             initial={{ opacity: 0, y: 100, scale: 0.8 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 100, scale: 0.8 }}
-            className="fixed bottom-6 right-6 z-50 w-96 h-[600px] bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden"
+            className="fixed inset-0 md:inset-auto md:bottom-6 md:right-6 z-50 w-full md:w-96 h-full md:h-[600px] bg-white md:rounded-2xl shadow-2xl flex flex-col overflow-hidden"
           >
             {/* Header */}
             <div className="bg-gradient-to-r from-rose-500 to-pink-500 text-white p-4 flex items-center justify-between">
@@ -114,7 +143,7 @@ export function ChatBot() {
             </div>
 
             {/* Messages */}
-            <div className="flex-1 overflow-y-auto p-4 space-y-4">
+            <div className="flex-1 overflow-y-auto overflow-x-hidden p-4 space-y-4 scroll-smooth">
               {messages.map((msg, idx) => (
                 <div
                   key={idx}
