@@ -9,11 +9,10 @@ export function GallerySection() {
   const galleryImages = [
     { id: 1, src: "/15d51096-8807-4ce6-a054-6ebd44badefd.JPG", alt: "Priya and Rohan" },
     { id: 2, src: "/2d261c38-a989-4f44-846f-b2e1f8648101.JPG", alt: "Priya and Rohan" },
-    { id: 3, src: "/416521de-7b82-4927-a641-116325462d62.JPG", alt: "Priya and Rohan" },
-    { id: 4, src: "/45bba2d6-8b2e-487a-8811-642520d34629.JPG", alt: "Priya and Rohan" },
-    { id: 5, src: "/46b092e1-50ea-432a-a0f9-487130d6d304.JPG", alt: "Priya and Rohan" },
-    { id: 6, src: "/839d325c-3c0a-4cde-babc-1a3a8c194276.JPG", alt: "Priya and Rohan" },
-    { id: 7, src: "/a4c52662-50de-44fd-a96d-c50ec384ca6e.JPG", alt: "Priya and Rohan" },
+    { id: 3, src: "/45bba2d6-8b2e-487a-8811-642520d34629.JPG", alt: "Priya and Rohan" },
+    { id: 4, src: "/46b092e1-50ea-432a-a0f9-487130d6d304.JPG", alt: "Priya and Rohan" },
+    { id: 5, src: "/839d325c-3c0a-4cde-babc-1a3a8c194276.JPG", alt: "Priya and Rohan" },
+    { id: 6, src: "/a4c52662-50de-44fd-a96d-c50ec384ca6e.JPG", alt: "Priya and Rohan" },
   ];
 
   return (

@@ -113,7 +113,7 @@ export function EventMap() {
           <div className="space-y-3 text-sm">
             <div>
               <p className="font-semibold text-gray-800 mb-1">
-                {WEDDING_DATA.venue.name}
+                {WEDDING_DATA.venue.address}
               </p>
               <p className="text-gray-600 text-xs">
                 Join us for an unforgettable celebration as we begin our journey together
@@ -158,7 +158,7 @@ export function EventMap() {
         <div className="space-y-4">
           <div>
             <p className="font-semibold text-gray-800 text-lg mb-2">
-              {WEDDING_DATA.venue.name}
+              {WEDDING_DATA.venue.address}
             </p>
             <p className="text-gray-600">
               Join us for an unforgettable celebration as we begin our journey together
