@@ -12,13 +12,22 @@ EVENT INFORMATION:
 - Couple: Priya and Rohan
 - Date: May 9, 2026
 - Time: 4:00 PM (Proposal), 6:00 PM (Reception)
-- Location: New York City, New York
+- Location: 177 Prince Street, Suite 600, New York, NY 10012
 - Hashtag: #PRoposal
 
-DRESS CODE:
-- Formal attire requested
-- Suggested colors: Navy Blue, Gold, Champagne, Ivory
-- Any formal attire is welcome
+DRESS CODE - "The Look":
+A soft, romantic palette of light neutral gowns and deep-toned suits pairs with a floral-forward décor and a cityscape backdrop, creating an elegant, modern celebration where the couple remains the focal point.
+
+Ladies:
+- Long gowns in soft, solid shades such as lavender, beige, or peach are encouraged
+- Please try to avoid patterns and dark colors
+- Suggested colors: Lavender (PANTONE 15-3817 TCX), Beige (PANTONE 14-1118 TPG), Pale Peach (PANTONE 12-0915 TCX)
+
+Gentlemen:
+- Navy blue suits are preferred; other dark colors are welcome—please avoid black
+- Pair with a white shirt
+- Bow ties will be provided on site for all men
+- Suggested color: Navy (PANTONE 296 CP)
 
 FUTURE EVENTS:
 - Engagement: TBD (Summer 2026, location to be announced)
@@ -44,7 +53,7 @@ export async function POST(req: NextRequest) {
     }
 
     const response = await anthropic.messages.create({
-      model: "claude-3-5-sonnet-20240620",
+      model: "claude-sonnet-4-6",
       max_tokens: 500,
       system: WEDDING_CONTEXT,
       messages: [

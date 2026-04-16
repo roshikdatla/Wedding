@@ -10,7 +10,7 @@ export const WEDDING_DATA = {
   },
   venue: {
     name: "New York City, New York",
-    address: "123 Wedding Lane, City, State 12345",
+    address: "177 Prince Street, Suite 600, New York, NY 10012",
     coordinates: {
       lat: 40.7128,
       lng: -74.0060,
@@ -21,14 +21,14 @@ export const WEDDING_DATA = {
       name: "Proposal",
       date: "May 9, 2026",
       time: "4:00 PM",
-      location: "New York City, New York",
+      location: "177 Prince Street, Suite 600, New York, NY 10012",
       description: "Join us for a special moment",
     },
     {
       name: "Reception",
       date: "May 9, 2026",
       time: "6:00 PM",
-      location: "New York City, New York",
+      location: "177 Prince Street, Suite 600, New York, NY 10012",
       description: "Dinner, dancing, and celebration",
     },
   ],
