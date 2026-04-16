@@ -33,14 +33,22 @@ export const WEDDING_DATA = {
     },
   ],
   dressCode: {
-    title: "Formal Attire",
-    description: "We kindly request formal attire for our special day",
-    colors: [
-      { name: "Navy Blue", hex: "#1e3a8a" },
-      { name: "Gold", hex: "#f59e0b" },
-      { name: "Champagne", hex: "#f5e6d3" },
-      { name: "Ivory", hex: "#fffff0" },
-    ],
+    title: "The Look",
+    description: "A soft, romantic palette of light neutral gowns and deep-toned suits pairs with a floral-forward décor and a cityscape backdrop, creating an elegant, modern celebration where the couple remains the focal point.",
+    ladies: {
+      description: "Long gowns in soft, solid shades such as lavender, beige, or peach are encouraged to create a light, elegant palette—please try to avoid patterns and dark colors.",
+      colors: [
+        { name: "Lavender", hex: "#C8B3CE", pantone: "15-3817 TCX" },
+        { name: "Beige", hex: "#D4C4A8", pantone: "14-1118 TPG" },
+        { name: "Pale Peach", hex: "#F3D5C8", pantone: "12-0915 TCX" },
+      ],
+    },
+    gentlemen: {
+      description: "Navy blue suits are preferred; other dark colors are welcome—please avoid black. Pair with a white shirt; bow ties will be provided on site for all men",
+      colors: [
+        { name: "Navy", hex: "#003057", pantone: "296 CP" },
+      ],
+    },
   },
   story: {
     howWeMet: {
