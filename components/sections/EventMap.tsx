@@ -7,8 +7,8 @@ import Image from "next/image";
 export function EventMap() {
   return (
     <div className="w-full space-y-4">
-      {/* Map Container - responsive height */}
-      <div className="relative w-full h-[300px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-white">
+      {/* Map Container - responsive height - Desktop only */}
+      <div className="hidden md:block relative w-full md:h-[500px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-white">
         {/* Map Image */}
         <div className="relative w-full h-full">
           <Image
@@ -144,7 +144,7 @@ export function EventMap() {
         </div>
       </div>
 
-      {/* Event Info Card - Mobile only, shown below map */}
+      {/* Event Info Card - Mobile only */}
       <div className="md:hidden bg-white p-6 rounded-2xl shadow-2xl border-2 border-rose-200">
         <div className="flex items-start gap-2 mb-4">
           <MapPin className="w-6 h-6 text-rose-500 flex-shrink-0 mt-1" />
