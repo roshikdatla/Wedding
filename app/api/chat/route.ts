@@ -2,7 +2,7 @@ import Anthropic from "@anthropic-ai/sdk";
 import { NextRequest, NextResponse } from "next/server";
 
 const anthropic = new Anthropic({
-  apiKey: "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",
+  apiKey: process.env.ANTHROPIC_API_KEY,
 });
 
 const WEDDING_CONTEXT = `You are a helpful wedding assistant for Priya and Rohan's proposal celebration. Here are the details:
