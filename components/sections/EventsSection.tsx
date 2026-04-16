@@ -12,7 +12,7 @@ export function EventsSection() {
           <div className="text-center mb-16">
             <Calendar className="w-12 h-12 text-secondary mx-auto mb-4" />
             <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-gray-900 mb-4">
-              Event Details
+              Proposal Event Details
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Join us as we celebrate our special day
