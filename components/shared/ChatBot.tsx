@@ -19,6 +19,7 @@ export function ChatBot() {
   ]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [questionCount, setQuestionCount] = useState(0);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
@@ -43,9 +44,22 @@ export function ChatBot() {
     e.preventDefault();
     if (!input.trim() || isLoading) return;
 
+    // Check question limit
+    if (questionCount >= 10) {
+      setMessages((prev) => [
+        ...prev,
+        {
+          role: "assistant",
+          content: "You've reached the 10 question limit. Please RSVP or contact us directly for more information!",
+        },
+      ]);
+      return;
+    }
+
     const userMessage = input.trim();
     setInput("");
     setMessages((prev) => [...prev, { role: "user", content: userMessage }]);
+    setQuestionCount((prev) => prev + 1);
     setIsLoading(true);
 
     try {
@@ -143,7 +157,7 @@ export function ChatBot() {
             </div>
 
             {/* Messages */}
-            <div className="flex-1 overflow-y-auto overflow-x-hidden p-4 space-y-4 scroll-smooth">
+            <div className="flex-1 min-h-0 overflow-y-auto overflow-x-hidden p-4 space-y-4 scroll-smooth">
               {messages.map((msg, idx) => (
                 <div
                   key={idx}
@@ -152,13 +166,13 @@ export function ChatBot() {
                   }`}
                 >
                   <div
-                    className={`max-w-[80%] p-3 rounded-2xl ${
+                    className={`max-w-[80%] p-3 rounded-2xl break-words ${
                       msg.role === "user"
                         ? "bg-gradient-to-r from-rose-500 to-pink-500 text-white"
                         : "bg-gray-100 text-gray-800"
                     }`}
                   >
-                    <p className="text-sm whitespace-pre-wrap">{msg.content}</p>
+                    <p className="text-sm whitespace-pre-wrap break-words">{msg.content}</p>
                   </div>
                 </div>
               ))}
