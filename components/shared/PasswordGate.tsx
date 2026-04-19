@@ -13,7 +13,7 @@ export function PasswordGate({ onAuthenticated }: PasswordGateProps) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (password === "password") {
+    if (password === "proposal2026") {
       onAuthenticated();
     } else {
       setError(true);
