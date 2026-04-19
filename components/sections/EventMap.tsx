@@ -120,14 +120,6 @@ export function EventMap() {
               >
                 {WEDDING_DATA.venue.address}
               </a>
-              <a
-                href="https://spothero.com/search?latitude=40.7231&longitude=-73.9962&search_string=177%20Prince%20Street,%20New%20York,%20NY"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:text-blue-700 underline text-xs block mb-1"
-              >
-                Find parking with SpotHero
-              </a>
               <p className="text-gray-600 text-xs">
                 Join us for an unforgettable celebration as we begin our journey together
               </p>
@@ -149,9 +141,15 @@ export function EventMap() {
             </div>
 
             <div className="pt-2 border-t border-gray-200">
-              <p className="text-gray-500 text-xs italic">
-                More details will be shared closer to the date
-              </p>
+              <p className="text-gray-800 font-semibold text-xs mb-1">Parking</p>
+              <a
+                href="https://spothero.com/search?latitude=40.7231&longitude=-73.9962&search_string=177%20Prince%20Street,%20New%20York,%20NY"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:text-blue-700 underline text-xs block"
+              >
+                Find parking with SpotHero
+              </a>
             </div>
           </div>
         </div>
@@ -178,14 +176,6 @@ export function EventMap() {
             >
               {WEDDING_DATA.venue.address}
             </a>
-            <a
-              href="https://spothero.com/search?latitude=40.7231&longitude=-73.9962&search_string=177%20Prince%20Street,%20New%20York,%20NY"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 hover:text-blue-700 underline block mb-2"
-            >
-              Find parking with SpotHero
-            </a>
             <p className="text-gray-600">
               Join us for an unforgettable celebration as we begin our journey together
             </p>
@@ -207,9 +197,15 @@ export function EventMap() {
           </div>
 
           <div className="pt-3 border-t border-gray-200">
-            <p className="text-gray-500 italic">
-              More details will be shared closer to the date
-            </p>
+            <p className="text-gray-800 font-semibold mb-2">Parking</p>
+            <a
+              href="https://spothero.com/search?latitude=40.7231&longitude=-73.9962&search_string=177%20Prince%20Street,%20New%20York,%20NY"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:text-blue-700 underline block"
+            >
+              Find parking with SpotHero
+            </a>
           </div>
         </div>
       </div>
