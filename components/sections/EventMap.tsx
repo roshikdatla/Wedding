@@ -142,6 +142,7 @@ export function EventMap() {
 
             <div className="pt-2 border-t border-gray-200">
               <p className="text-gray-800 font-semibold text-xs mb-1">Parking</p>
+              <p className="text-gray-600 text-xs mb-1">Parking garages are available nearby to the venue</p>
               <a
                 href="https://spothero.com/search?latitude=40.7231&longitude=-73.9962&search_string=177%20Prince%20Street,%20New%20York,%20NY"
                 target="_blank"
@@ -198,6 +199,7 @@ export function EventMap() {
 
           <div className="pt-3 border-t border-gray-200">
             <p className="text-gray-800 font-semibold mb-2">Parking</p>
+            <p className="text-gray-600 mb-2">Parking garages are available nearby to the venue</p>
             <a
               href="https://spothero.com/search?latitude=40.7231&longitude=-73.9962&search_string=177%20Prince%20Street,%20New%20York,%20NY"
               target="_blank"
