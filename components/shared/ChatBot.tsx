@@ -144,7 +144,6 @@ export function ChatBot() {
   const suggestedQuestions = [
     "What can I wear?",
     "Where is the venue?",
-    "What's the weather like in May?",
   ];
 
   return (
@@ -223,7 +222,6 @@ export function ChatBot() {
             {/* Suggested Questions */}
             {messages.length === 1 && (
               <div className="px-4 pb-2">
-                <p className="text-xs text-gray-500 mb-2">Quick questions:</p>
                 <div className="flex flex-wrap gap-2">
                   {suggestedQuestions.map((question, idx) => (
                     <button
