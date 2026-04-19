@@ -121,7 +121,7 @@ export function EventMap() {
                 {WEDDING_DATA.venue.address}
               </a>
               <p className="text-gray-600 text-xs">
-                Join us for an unforgettable celebration as we begin our journey together
+                Drinks and food will be provided at the venue
               </p>
             </div>
 
@@ -178,7 +178,7 @@ export function EventMap() {
               {WEDDING_DATA.venue.address}
             </a>
             <p className="text-gray-600">
-              Join us for an unforgettable celebration as we begin our journey together
+              Drinks and food will be provided at the venue
             </p>
           </div>
 
