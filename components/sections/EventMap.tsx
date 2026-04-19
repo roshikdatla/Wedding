@@ -112,9 +112,22 @@ export function EventMap() {
 
           <div className="space-y-3 text-sm">
             <div>
-              <p className="font-semibold text-gray-800 mb-1">
+              <a
+                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(WEDDING_DATA.venue.address)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-rose-600 hover:text-rose-700 underline mb-1 block"
+              >
                 {WEDDING_DATA.venue.address}
-              </p>
+              </a>
+              <a
+                href="https://spothero.com/search?latitude=40.7231&longitude=-73.9962&search_string=177%20Prince%20Street,%20New%20York,%20NY"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:text-blue-700 underline text-xs block mb-1"
+              >
+                Find parking with SpotHero
+              </a>
               <p className="text-gray-600 text-xs">
                 Join us for an unforgettable celebration as we begin our journey together
               </p>
@@ -157,9 +170,22 @@ export function EventMap() {
 
         <div className="space-y-4">
           <div>
-            <p className="font-semibold text-gray-800 text-lg mb-2">
+            <a
+              href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(WEDDING_DATA.venue.address)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-rose-600 hover:text-rose-700 underline text-lg mb-2 block"
+            >
               {WEDDING_DATA.venue.address}
-            </p>
+            </a>
+            <a
+              href="https://spothero.com/search?latitude=40.7231&longitude=-73.9962&search_string=177%20Prince%20Street,%20New%20York,%20NY"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:text-blue-700 underline block mb-2"
+            >
+              Find parking with SpotHero
+            </a>
             <p className="text-gray-600">
               Join us for an unforgettable celebration as we begin our journey together
             </p>

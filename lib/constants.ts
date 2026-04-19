@@ -18,11 +18,11 @@ export const WEDDING_DATA = {
   },
   events: [
     {
-      name: "Proposal",
+      name: "Arrival",
       date: "May 9, 2026",
-      time: "4:00 PM",
+      time: "No later than 2:30 PM",
       location: "177 Prince Street, Suite 600, New York, NY 10012",
-      description: "Join us for a special moment",
+      description: "Please arrive on time",
     },
     {
       name: "Reception",
@@ -30,6 +30,13 @@ export const WEDDING_DATA = {
       time: "6:00 PM",
       location: "177 Prince Street, Suite 600, New York, NY 10012",
       description: "Dinner, dancing, and celebration",
+    },
+    {
+      name: "Event Ends",
+      date: "May 9, 2026",
+      time: "11:00 PM",
+      location: "177 Prince Street, Suite 600, New York, NY 10012",
+      description: "See you soon!",
     },
   ],
   dressCode: {

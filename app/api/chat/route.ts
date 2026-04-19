@@ -11,8 +11,11 @@ EVENT INFORMATION:
 - Event: Proposal Celebration
 - Couple: Priya and Rohan
 - Date: May 9, 2026
-- Time: 4:00 PM (Proposal), 6:00 PM (Reception)
+- Arrival: No later than 2:30 PM
+- Reception: 6:00 PM
+- Event Ends: 11:00 PM
 - Location: 177 Prince Street, Suite 600, New York, NY 10012
+- Parking: SpotHero link available on website
 - Hashtag: #PRoposal
 
 DRESS CODE - "The Look":
