@@ -15,8 +15,11 @@ EVENT INFORMATION:
 - Reception: 6:00 PM
 - Event Ends: 11:00 PM
 - Location: 177 Prince Street, Suite 600, New York, NY 10012
-- Parking: SpotHero link available on website
+- Venue: The venue is in New York City at 177 Prince Street, Suite 600
+- Food & Drinks: Drinks and food will be provided at the venue
+- Parking: Parking garages are available nearby. SpotHero link available on website for easy booking
 - Hashtag: #PRoposal
+- Weather: In early May, NYC typically has pleasant spring weather with temperatures around 60-70°F. Recommend checking forecast closer to the date
 
 DRESS CODE - "The Look":
 A soft, romantic palette of light neutral gowns and deep-toned suits pairs with a floral-forward décor and a cityscape backdrop, creating an elegant, modern celebration where the couple remains the focal point.

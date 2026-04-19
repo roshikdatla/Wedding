@@ -40,6 +40,27 @@ export function ChatBot() {
     return () => clearInterval(scrollInterval);
   }, [isLoading]);
 
+  const handleSuggestedQuestion = (question: string) => {
+    if (isLoading) return;
+
+    // Check question limit
+    if (questionCount >= 10) {
+      setMessages((prev) => [
+        ...prev,
+        {
+          role: "assistant",
+          content: "You've reached the 10 question limit. Please RSVP or contact us directly for more information!",
+        },
+      ]);
+      return;
+    }
+
+    setMessages((prev) => [...prev, { role: "user", content: question }]);
+    setQuestionCount((prev) => prev + 1);
+    setIsLoading(true);
+    sendMessageToAPI(question);
+  };
+
   const sendMessage = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!input.trim() || isLoading) return;
@@ -61,7 +82,10 @@ export function ChatBot() {
     setMessages((prev) => [...prev, { role: "user", content: userMessage }]);
     setQuestionCount((prev) => prev + 1);
     setIsLoading(true);
+    sendMessageToAPI(userMessage);
+  };
 
+  const sendMessageToAPI = async (userMessage: string) => {
     try {
       const response = await fetch("/api/chat", {
         method: "POST",
@@ -116,6 +140,12 @@ export function ChatBot() {
       setIsLoading(false);
     }
   };
+
+  const suggestedQuestions = [
+    "What can I wear?",
+    "Where is the venue?",
+    "What's the weather like in May?",
+  ];
 
   return (
     <>
@@ -189,6 +219,25 @@ export function ChatBot() {
               )}
               <div ref={messagesEndRef} />
             </div>
+
+            {/* Suggested Questions */}
+            {messages.length === 1 && (
+              <div className="px-4 pb-2">
+                <p className="text-xs text-gray-500 mb-2">Quick questions:</p>
+                <div className="flex flex-wrap gap-2">
+                  {suggestedQuestions.map((question, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => handleSuggestedQuestion(question)}
+                      disabled={isLoading}
+                      className="px-3 py-1.5 text-xs bg-rose-50 text-rose-600 rounded-full hover:bg-rose-100 transition-colors disabled:opacity-50"
+                    >
+                      {question}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
 
             {/* Input */}
             <form onSubmit={sendMessage} className="p-4 border-t border-gray-200">
