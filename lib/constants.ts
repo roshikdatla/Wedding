@@ -27,7 +27,7 @@ export const WEDDING_DATA = {
     {
       name: "Reception",
       date: "May 9, 2026",
-      time: "6:00 PM",
+      time: "5:00 PM",
       location: "177 Prince Street, Suite 600, New York, NY 10012",
       description: "Dinner, dancing, and celebration",
     },

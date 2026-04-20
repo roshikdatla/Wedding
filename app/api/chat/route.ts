@@ -12,7 +12,7 @@ EVENT INFORMATION:
 - Couple: Priya and Rohan
 - Date: May 9, 2026
 - Arrival: No later than 2:30 PM
-- Reception: 6:00 PM
+- Reception: 5:00 PM
 - Event Ends: 11:00 PM
 - Location: 177 Prince Street, Suite 600, New York, NY 10012
 - Venue: The venue is in New York City at 177 Prince Street, Suite 600
