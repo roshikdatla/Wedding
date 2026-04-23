@@ -13,8 +13,8 @@ export function GallerySection() {
     { id: 4, src: "/46b092e1-50ea-432a-a0f9-487130d6d304.JPG", alt: "Priya and Rohan" },
     { id: 5, src: "/839d325c-3c0a-4cde-babc-1a3a8c194276.JPG", alt: "Priya and Rohan" },
     { id: 6, src: "/a4c52662-50de-44fd-a96d-c50ec384ca6e.JPG", alt: "Priya and Rohan" },
-    { id: 7, src: "/IMG_5868.JPEG", alt: "Priya and Rohan" },
-    { id: 8, src: "/IMG_8841.JPEG", alt: "Priya and Rohan" },
+    { id: 7, src: "/IMG_5868.jpg", alt: "Priya and Rohan" },
+    { id: 8, src: "/IMG_8841.jpg", alt: "Priya and Rohan" },
     { id: 9, src: "/IMG_7828.jpg", alt: "Priya and Rohan" },
     { id: 10, src: "/IMG_8463.jpg", alt: "Priya and Rohan" },
   ];
