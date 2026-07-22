@@ -1,23 +1,13 @@
 "use client";
 
 import { FadeInWhenVisible } from "@/components/animations/FadeInWhenVisible";
+import { GROOMSMAN_DATA } from "@/lib/constants";
 import { Camera } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
 export function GallerySection() {
-  const galleryImages = [
-    { id: 1, src: "/15d51096-8807-4ce6-a054-6ebd44badefd.JPG", alt: "Priya and Rohan" },
-    { id: 2, src: "/2d261c38-a989-4f44-846f-b2e1f8648101.JPG", alt: "Priya and Rohan" },
-    { id: 3, src: "/45bba2d6-8b2e-487a-8811-642520d34629.JPG", alt: "Priya and Rohan" },
-    { id: 4, src: "/46b092e1-50ea-432a-a0f9-487130d6d304.JPG", alt: "Priya and Rohan" },
-    { id: 5, src: "/839d325c-3c0a-4cde-babc-1a3a8c194276.JPG", alt: "Priya and Rohan" },
-    { id: 6, src: "/a4c52662-50de-44fd-a96d-c50ec384ca6e.JPG", alt: "Priya and Rohan" },
-    { id: 7, src: "/IMG_5868.jpg", alt: "Priya and Rohan" },
-    { id: 8, src: "/IMG_8841.jpg", alt: "Priya and Rohan" },
-    { id: 9, src: "/IMG_7828.jpg", alt: "Priya and Rohan" },
-    { id: 10, src: "/IMG_8463.jpg", alt: "Priya and Rohan" },
-  ];
+  const { title, subtitle, images } = GROOMSMAN_DATA.gallery;
 
   return (
     <section id="gallery" className="py-20 md:py-32 bg-gradient-to-b from-white to-accent/20">
@@ -26,16 +16,14 @@ export function GallerySection() {
           <div className="text-center mb-16">
             <Camera className="w-12 h-12 text-secondary mx-auto mb-4" />
             <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-gray-900 mb-4">
-              Our Memories
+              {title}
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              A glimpse into our journey together
-            </p>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">{subtitle}</p>
           </div>
         </FadeInWhenVisible>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {galleryImages.map((image, index) => (
+          {images.map((image, index) => (
             <FadeInWhenVisible key={image.id} delay={index * 0.1}>
               <motion.div
                 whileHover={{ scale: 1.05 }}

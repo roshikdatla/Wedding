@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 import { SmoothScrollProvider } from "@/components/shared/SmoothScrollProvider";
-import { WEDDING_DATA } from "@/lib/constants";
+import { GROOMSMAN_DATA } from "@/lib/constants";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -17,8 +17,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Priya and Rohan's Proposal",
-  description: `Join us in celebrating the wedding of ${WEDDING_DATA.couple.bride} and ${WEDDING_DATA.couple.groom} on ${WEDDING_DATA.date.full}`,
+  title: `Will You Be My Groomsman? — ${GROOMSMAN_DATA.groom}`,
+  description: `${GROOMSMAN_DATA.groom} is getting married on ${GROOMSMAN_DATA.wedding.dateFull} and wants you standing next to him.`,
 };
 
 export default function RootLayout({

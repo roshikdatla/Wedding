@@ -2,15 +2,15 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { WEDDING_DATA } from "@/lib/constants";
+import { GROOMSMAN_DATA } from "@/lib/constants";
 import { Menu, X } from "lucide-react";
 
 const navItems = [
   { name: "Home", href: "#home" },
-  { name: "Events", href: "#events" },
-  { name: "Dress Code", href: "#dress-code" },
+  { name: "The Ask", href: "#ask" },
+  { name: "Details", href: "#details" },
   { name: "Gallery", href: "#gallery" },
-  { name: "RSVP", href: "#rsvp" },
+  { name: "Respond", href: "#respond" },
 ];
 
 export function Navigation() {
@@ -44,7 +44,7 @@ export function Navigation() {
               isScrolled ? "text-primary" : "text-white"
             }`}
           >
-            {WEDDING_DATA.couple.bride[0]} & {WEDDING_DATA.couple.groom[0]}
+            {GROOMSMAN_DATA.groom}
           </a>
 
           {/* Desktop Navigation */}

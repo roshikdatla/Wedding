@@ -1,6 +1,6 @@
 "use client";
 
-import { WEDDING_DATA } from "@/lib/constants";
+import { GROOMSMAN_DATA } from "@/lib/constants";
 import { Heart } from "lucide-react";
 
 export function Footer() {
@@ -10,19 +10,15 @@ export function Footer() {
         <div className="text-center space-y-4">
           <div className="flex items-center justify-center gap-2">
             <Heart className="w-5 h-5 text-secondary fill-secondary" />
-            <p className="font-serif text-2xl text-primary">
-              {WEDDING_DATA.couple.bride} & {WEDDING_DATA.couple.groom}
-            </p>
+            <p className="font-serif text-2xl text-primary">{GROOMSMAN_DATA.groom}</p>
             <Heart className="w-5 h-5 text-secondary fill-secondary" />
           </div>
 
           <p className="text-gray-600">
-            {WEDDING_DATA.date.full} • {WEDDING_DATA.venue.name}
+            {GROOMSMAN_DATA.wedding.dateFull} • {GROOMSMAN_DATA.wedding.location}
           </p>
 
-          <p className="text-lg font-medium text-primary">
-            #<span className="text-yellow-400">P</span><span className="text-yellow-400">R</span>oposal
-          </p>
+          <p className="text-lg font-medium text-primary">{GROOMSMAN_DATA.contact.hashtag}</p>
         </div>
       </div>
     </footer>
