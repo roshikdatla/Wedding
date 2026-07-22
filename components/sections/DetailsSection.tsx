@@ -31,6 +31,16 @@ export function DetailsSection() {
                   {detail.value}
                 </p>
                 <p className="text-gray-600">{detail.note}</p>
+                {detail.link && (
+                  <a
+                    href={detail.link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block mt-4 text-sm font-semibold text-secondary hover:text-secondary/80 underline underline-offset-4"
+                  >
+                    {detail.link.label} →
+                  </a>
+                )}
               </div>
             </FadeInWhenVisible>
           ))}

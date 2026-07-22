@@ -20,7 +20,7 @@ export function HeroSection() {
           transition={{ duration: 0.8 }}
           className="uppercase tracking-[0.3em] text-secondary text-sm md:text-base mb-6"
         >
-          {GROOMSMAN_DATA.groom} is getting married
+          yo qq
         </motion.p>
 
         <motion.h1

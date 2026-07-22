@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { GROOMSMAN_DATA } from "@/lib/constants";
 import { Menu, X } from "lucide-react";
 
 const navItems = [
@@ -44,7 +43,7 @@ export function Navigation() {
               isScrolled ? "text-primary" : "text-white"
             }`}
           >
-            {GROOMSMAN_DATA.groom}
+            Groomsman
           </a>
 
           {/* Desktop Navigation */}

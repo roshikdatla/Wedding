@@ -15,13 +15,11 @@ export function AskSection() {
           </h2>
         </FadeInWhenVisible>
 
-        {GROOMSMAN_DATA.message.paragraphs.map((paragraph, index) => (
-          <FadeInWhenVisible key={index} delay={0.2 + index * 0.15}>
-            <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-6">
-              {paragraph}
-            </p>
-          </FadeInWhenVisible>
-        ))}
+        <FadeInWhenVisible delay={0.2}>
+          <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-6">
+            {GROOMSMAN_DATA.message.askLine}
+          </p>
+        </FadeInWhenVisible>
 
         <FadeInWhenVisible delay={0.5}>
           <p className="font-serif text-2xl md:text-3xl text-primary mt-8">
