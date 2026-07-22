@@ -2,8 +2,9 @@ export const GROOMSMAN_DATA = {
   groom: "Rohan",
   partner: "Priya",
   wedding: {
-    dateFull: "May 9, 2026",
-    dateIso: "2026-05-09",
+    dateFull: "November 24–25, 2026",
+    dateIso: "2026-11-24",
+    arrivalDate: "November 23, 2026",
     location: "New York City, New York",
   },
   ask: {
@@ -20,8 +21,13 @@ export const GROOMSMAN_DATA = {
   details: [
     {
       label: "The Wedding",
-      value: "May 9, 2026",
-      note: "New York City — save the date, more info soon.",
+      value: "Nov 24 – 25, 2026",
+      note: "New York City — two days of celebration.",
+    },
+    {
+      label: "Arrival",
+      value: "Night of Nov 23",
+      note: "Please arrive by the evening of Nov 23, and plan to be at the venue early on both Nov 24 and Nov 25.",
     },
     {
       label: "Attire",
@@ -33,23 +39,26 @@ export const GROOMSMAN_DATA = {
       value: "TBD",
       note: "Planning in progress — stay tuned.",
     },
+    {
+      label: "Carnival Dance",
+      value: "Choreographed",
+      note: "We're putting together a choreographed dance for the carnival — rehearsal details coming soon.",
+    },
   ],
-  gallery: {
-    title: "Good Times",
-    subtitle: "A few of the memories that got us here",
-    images: [
-      { id: 1, src: "/15d51096-8807-4ce6-a054-6ebd44badefd.JPG", alt: "The crew" },
-      { id: 2, src: "/2d261c38-a989-4f44-846f-b2e1f8648101.JPG", alt: "The crew" },
-      { id: 3, src: "/45bba2d6-8b2e-487a-8811-642520d34629.JPG", alt: "The crew" },
-      { id: 4, src: "/46b092e1-50ea-432a-a0f9-487130d6d304.JPG", alt: "The crew" },
-      { id: 5, src: "/839d325c-3c0a-4cde-babc-1a3a8c194276.JPG", alt: "The crew" },
-      { id: 6, src: "/a4c52662-50de-44fd-a96d-c50ec384ca6e.JPG", alt: "The crew" },
-      { id: 7, src: "/IMG_5868.jpg", alt: "The crew" },
-      { id: 8, src: "/IMG_8841.jpg", alt: "The crew" },
-      { id: 9, src: "/IMG_7828.jpg", alt: "The crew" },
-      { id: 10, src: "/IMG_8463.jpg", alt: "The crew" },
-    ],
-  },
+  roster: [
+    { name: "Roshik", role: "Best Man" },
+    { name: "Anoop", role: "Groomsman" },
+    { name: "Ankith", role: "Groomsman" },
+    { name: "Sameer", role: "Groomsman" },
+    { name: "Gary", role: "Groomsman" },
+    { name: "Gabe", role: "Groomsman" },
+    { name: "Anudeep", role: "Groomsman" },
+    { name: "Sahil", role: "Groomsman" },
+    { name: "Naveen", role: "Groomsman" },
+    { name: "Sahit", role: "Groomsman" },
+    { name: "Nikesh", role: "Groomsman" },
+    { name: "Dani", role: "Groomsman" },
+  ],
   contact: {
     email: "rohan@example.com",
     hashtag: "#GroomsmenForRohan",
