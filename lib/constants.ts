@@ -30,7 +30,7 @@ export const GROOMSMAN_DATA = {
     {
       label: "Attire",
       value: "Pastel Pink Jodhpuri Suit",
-      note: "For the ceremony only — groomsmen can follow the general dress code for the other events. Please refer to the how-to-measure guide and size chart on the product page before ordering.",
+      note: "This is for the traditional ceremony only. Groomsmen can follow the general dress code for the other events. Please refer to the how-to-measure guide and size chart on the product page before ordering.",
       link: {
         url: "https://www.utsavfashion.com/product/woven-terry-rayon-jodhpuri-suit-in-pink-mdw2186-fh26?fbclid=IwY2xjawTM_1pleHRuA2FlbQIxMABicmlkETJwRnFaUkR2eG5HQkxJenhnc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHknt73L-cjiAE6ZqlfKXTlY-2XMM0FiemMfLqLvj_bRYoc7gfdaz0qGVecdT_aem_Ix3uN9zFgnkBdtkghuPp-w",
         label: "Shop the Suit",
@@ -45,7 +45,7 @@ export const GROOMSMAN_DATA = {
     {
       label: "Carnival Dance",
       value: "Choreographed",
-      note: "We're putting together a choreographed dance for the carnival — rehearsal details coming soon.",
+      note: "Some of our dancer groomsmen will help to choreograph a groomsmen dance. Details coming soon.",
       link: null,
     },
   ],
